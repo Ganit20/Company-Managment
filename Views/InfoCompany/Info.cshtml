@@ -1,0 +1,46 @@
+﻿@model Company_Managment.Models.Companies
+
+@{
+    ViewData["Title"] = "InfoCompany";
+
+}
+<link rel="stylesheet" href="~/css/CompanySite.css" />
+<h4>Company @Model.Name info.</h4>
+<div class="grid">
+
+    <div class="C-photo">
+        <img src="~/img/M-default.png" style="height:100%; width:100%;" />
+    </div>
+    <div class=" C-settings">
+        <a asp-action="Index">Back to List</a>
+    </div>
+    <div class="C-info">
+        <table>
+            <tr>
+                <td>Company Name:</td>
+                <td>@Html.DisplayFor(modelItem => Model.Name)</td>
+            </tr>
+            <tr>
+                <td>Founder: </td>
+                <td>@Html.DisplayFor(modelItem => Model.CreatorName)</td>
+            </tr>
+            <tr>
+                <td>Creation Date:</td>
+                <td>@Html.DisplayFor(modelItem => Model.CreateDate)</td>
+            </tr>
+
+        </table>
+    </div>
+    <div class="C-employee-list">
+        <table>
+            <tr><th>Employees</th></tr>
+            @foreach (var item in Model.workers)
+            {
+                <tr><td>@Html.DisplayFor(modelItem => item)</td></tr>
+            }
+        </table>
+    </div>
+
+</div>
+
+

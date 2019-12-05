@@ -1,0 +1,26 @@
+﻿.grid {
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    display:grid;
+
+}
+.C-photo {
+    grid-column: 1;
+    width: 100%;
+    height: 100%;
+    grid-row: 1;
+}
+.C-settings {
+    grid-column:2;
+    grid-row:1;
+}
+.C-info {
+    grid-column:1;
+    grid-row:2;
+    height:auto;
+    width:auto;
+}
+.C-employee-list {
+    grid-column:2;
+    grid-row:2;
+}
